@@ -1,18 +1,10 @@
-Backtracking
-BFS
-Dfs
-Parsing, config...
-Maze rendring
-Packaging
----------------------------------------------------------
-
 Create your own maze generator and display its result!
 
 
 # Introduction:
-Maze generation is more than just fun: it’s a practical application of algorithms, randomness, and graph theory. Some famous algorithms used for maze generation — like __Prim’s__, __Kruskal’s__, or the __recursive backtracker__.
-Perfect mazes (with one unique path between any two points) are
-directly related to __spanning trees__ in __graph theory__.
+- Maze generation is more than just fun: it’s a practical application of algorithms, randomness, and __graph theory__.
+- Some famous algorithms used for maze generation — like __Prim’s__, __Kruskal’s__, or the __recursive backtracker__.
+- Perfect mazes (with one unique path between any two points) are directly related to __spanning trees__ in __graph theory__.
 
 
 # Common Instructions:
@@ -22,27 +14,28 @@ directly related to __spanning trees__ in __graph theory__.
 - Prefer __context managers__ for resources like files or connections to ensure automatic cleanup
 - If your program crashes due to unhandled exceptions during the review, it will be considered non-functional.
 - All resources (e.g., file handles, __network connections__) must be properly managed to prevent leaks. Use __context managers__ where possible for automatic handling.
-- Your code must include __type hints__ for function parameters, return types, and vari- ables where applicable (using the __typing module__).
-- Use __mypy__ for __static type checking__. All functions must pass mypy without errors.
+- Your code must include __type hints__ for function parameters, return types, and variables where applicable (using the __typing module__).
+- Use __mypy__ for __static type checking__.
+- All functions must pass mypy without errors.
 - Include docstrings in functions and classes following __PEP 257__ (e.g., Google or NumPy style) to document purpose, parameters, and returns.
 
 2. Makefile:
 - Include a Makefile in your project to automate common tasks.
 - It must contain the following rules (__mandatory lint__ implies the specified flags; it is strongly recommended to __try–strict__ for enhanced checking).
-- **install**: Install project dependencies using pip, uv, pipx, or any other package manager of your choice.
+- **install**: Install project dependencies using __pip, uv, pipx__, or any other package manager of your choice.
 - **run**: Execute the main script of your project (e.g., via Python interpreter).
-- **debug**: Run the main script in debug mode using Python’s built-in debugger (e.g., pdb).
-- **clean**: Remove temporary files or caches (e.g., __pycache__, .mypy_cache) to
+- **debug**: Run the main script in debug mode using Python’s built-in debugger (e.g., __pdb__).
+- **clean**: Remove temporary files or caches (e.g., __pycache__, __.mypy_cache__) to
 keep the project environment clean.
-- **lint**: Execute the commands flake8 and mypy.
---warn-return-any --warn-unused-ignores --ignore-missing-imports --disallow-untyped-defs --check-untyped-defs.
+- **lint**: Execute the commands flake8 and __mypy__.
+__--warn-return-any --warn-unused-ignores --ignore-missing-imports --disallow-untyped-defs --check-untyped-defs__
 - **lint-strict** (optional): Execute the commands flake8 and mypy --strict
 
 
 # Additional Guidelines:
-- Create test programs to verify project functionality (not submitted or graded). Use frameworks like pytest or unittest for unit tests, covering edge cases.
+- Create test programs to verify project functionality (not submitted or graded). Use frameworks like __pytest__ or __unittest__ for unit tests, covering edge cases.
 - Include a .gitignore file to exclude Python artifacts.
-- It is recommended to use virtual environments (e.g., venv or conda) for dependency isolation during development.
+- It is recommended to use __virtual environments__ (e.g., __venv or conda__) for __dependency isolation__ during development.
 
 
 
@@ -57,11 +50,11 @@ You will implement a __maze generator__ in Python that takes a __configuration f
 - a_maze_ing.py is your main program file. You must use this name.
 - config.txt is the only argument. It is a plain text file that defines the maze generation options. You can use a different filename.
 - Your program must handle all errors gracefully:
-invalid configuration.
-file not found.
-bad syntax.
-impossible maze parameters, etc...
-It must never crash unexpectedly, and must always provide a clear error message to the user.
+    invalid configuration.
+    file not found.
+    bad syntax.
+    impossible maze parameters, etc...
+    it must never crash unexpectedly, and must always provide a clear error message to the user.
 
 3. Configuration file format:
 - The configuration file must contain one ‘KEY=VALUE‘ pair per line.
@@ -75,7 +68,7 @@ PERFECT (Is the maze perfect?) PERFECT=True
 - A default configuration file must be available in your Git repository.
 
 4. Maze Requirements:
-- The maze must be randomly generated, but reproducibility via a seed is required.
+- The maze must be randomly generated, but __reproducibility via a seed is required__.
 - Each cell of the maze has between 0 and 4 walls, at each cardinal point (North, Est, South, West).
 - The maze must be valid, meaning:
     - Entry and exit exist and are different, inside the maze bounds.
