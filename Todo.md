@@ -3,9 +3,9 @@ Before writing logic, ensure your development environment meets the strict submi
 
 - [DONE] Initialize Git Repository: Create a root directory.
 - [DONE?] Create .gitignore: Exclude __pycache__, *.pyc, .venv, .mypy_cache, and build//dist/ directories.
-- [ ] Set up Virtual Environment:
-    [ ] Create a venv (python3 -m venv .venv).
-    [ ] Activate it.
+- [Negative] Set up Virtual Environmen:
+    [Negative] Create a venv (python3 -m venv .venv).
+    [Negative] Activate it. (check my notes)
 - [ ] Create the Makefile:
     [ ] Implement the mandatory rules:
     [ ] install: Run pip install . or pip install -r requirements.txt.
@@ -13,7 +13,7 @@ Before writing logic, ensure your development environment meets the strict submi
     [ ] debug: python3 -m pdb a_maze_ing.py config.txt.
     [ ] clean: Remove cache folders and build artifacts.
     [ ] lint: Run flake8 and mypy with the required flags (--warn-return-any, etc.).
-- [ ] Install Dev Tools: Install flake8, mypy, and build (for packaging).
+- [ ] Install Dev Tools: Install flake8, mypy, and build (for packaging).L
 
 # Phase 2: The Reusable Module (mazegen):
 You must build the generator as a standalone library first. This is the "Code reusability" requirement.
