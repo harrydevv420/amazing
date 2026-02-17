@@ -16,10 +16,12 @@ def gere_close(dummy):
 m = Mlx()
 mlx_ptr = m.mlx_init()
 win_ptr = m.mlx_new_window(mlx_ptr, 500, 500, "salah")
+image_ptr = m.mlx_new_image(mlx_ptr, 64, 56)
 m.mlx_clear_window(mlx_ptr, win_ptr)
 m.mlx_string_put(mlx_ptr, win_ptr, 200,  200, 255, "Hello Othmane!")
 (ret, w, h) = m.mlx_get_screen_size(mlx_ptr)
 print(f"Got screen size: {w} x {h} .")
+
 
 stuff = [1, 2]
 m.mlx_mouse_hook(win_ptr, mymouse, None)

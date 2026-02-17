@@ -41,3 +41,7 @@ build:
 test:
     python -m unittest discover
 ```
+
+
+#### first impreation:
+playing around with mlx! feels nice already! lets goo
